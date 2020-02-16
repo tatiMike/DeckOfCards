@@ -1,0 +1,9 @@
+﻿@model List<Card>
+
+<h1>Get Cards</h1>
+    @foreach (Card card in Model)
+    {
+        <image src="@card.image"></image>
+        @card.value
+        @card.suit 
+    }
