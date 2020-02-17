@@ -15,6 +15,7 @@ namespace DeckOfCards.Models
         public string value { get; set; }
         public string code { get; set; }
         public string suit { get; set; }
-
+        public bool shuffled { get; set; }
+        public int remaining { get; set; }
     }
 }

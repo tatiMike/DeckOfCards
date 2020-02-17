@@ -11,13 +11,13 @@ namespace DeckOfCards.Controllers
 {
     public class CardController : Controller
     {
-        // this Json document object will eventually pull our cards after we draw from the deck
+        // this Json document object will eventually pull our cards out after we draw from the deck
         private JsonDocument jDoc;
 
-        //1st) make a method to draw new deck - this will give us access to a deck id
+        //1st) make a method that draws a new deck -- this will give us access to a deck id
         public async Task<string> GetDeck()
         {
-            // make using block to hold HttpClient onbject
+            // make using block to hold HttpClient object
             using (var httpClient = new HttpClient())
             {
                 // make another using block to make an async call to the API
@@ -34,15 +34,17 @@ namespace DeckOfCards.Controllers
             return jDoc.RootElement.GetProperty("deck_id").GetString();
         }
 
-        // (1) make an async method that will call a Deck of Cards API and return to use a number of cards
+        // (1) make an async method that will call the Deck of Cards API 
+        // -- and return to use a number of cards --
         // (2) put those in a List of Cards and return them
         public async Task<List<Card>> GetCards(string deckId)
         {
-            // make a black List of Cards to add cards to later
+            // make a blank List of Cards to add cards to later
             List<Card> cardList = new List<Card>();
             using (var httpClient = new HttpClient())
             {
-                using (var response = await httpClient.GetAsync($"https://deckofcardsapi.com/api/deck/{deckId}/draw/?count=52"))
+                using (var response = await httpClient.
+                    GetAsync($"https://deckofcardsapi.com/api/deck/{deckId}/draw/?count=6"))
                 {
                     var stringResponse = await response.Content.ReadAsStringAsync();
                     jDoc = JsonDocument.Parse(stringResponse);
@@ -67,6 +69,28 @@ namespace DeckOfCards.Controllers
             }
 
             return cardList;
-        } 
+        }
+
+        //public async Task<string> ShuffleDeck(string deckId)
+        //{
+        //    Card shuffleCards = new Card();
+        //    using (var httpClient = new HttpClient())
+        //    {
+        //        using (var response = await httpClient.
+        //            GetAsync($"https://deckofcardsapi.com/api/deck/{deckId}/shuffle/"))
+        //        {
+        //            var stringResponse = await response.Content.ReadAsStringAsync();
+        //            jDoc = JsonDocument.Parse(stringResponse);
+
+        //            var jsonShuffle = jDoc.RootElement.GetProperty("shuffled");
+
+        //            if (jsonShuffle = )
+        //            {
+
+        //            }
+        //        }
+        //    }
+        //    return jsonSh
+        //}
     }
 }

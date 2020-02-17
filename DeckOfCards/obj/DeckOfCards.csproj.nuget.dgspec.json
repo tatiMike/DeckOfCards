@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\theP4\\source\\repos\\DeckOfCards\\DeckOfCards\\DeckOfCards.csproj": {}
+    "C:\\Users\\14192\\source\\repos\\DeckOfCards\\DeckOfCards\\DeckOfCards.csproj": {}
   },
   "projects": {
-    "C:\\Users\\theP4\\source\\repos\\DeckOfCards\\DeckOfCards\\DeckOfCards.csproj": {
+    "C:\\Users\\14192\\source\\repos\\DeckOfCards\\DeckOfCards\\DeckOfCards.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\theP4\\source\\repos\\DeckOfCards\\DeckOfCards\\DeckOfCards.csproj",
+        "projectUniqueName": "C:\\Users\\14192\\source\\repos\\DeckOfCards\\DeckOfCards\\DeckOfCards.csproj",
         "projectName": "DeckOfCards",
-        "projectPath": "C:\\Users\\theP4\\source\\repos\\DeckOfCards\\DeckOfCards\\DeckOfCards.csproj",
-        "packagesPath": "C:\\Users\\theP4\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\theP4\\source\\repos\\DeckOfCards\\DeckOfCards\\obj\\",
+        "projectPath": "C:\\Users\\14192\\source\\repos\\DeckOfCards\\DeckOfCards\\DeckOfCards.csproj",
+        "packagesPath": "C:\\Users\\14192\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\14192\\source\\repos\\DeckOfCards\\DeckOfCards\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\theP4\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\14192\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
